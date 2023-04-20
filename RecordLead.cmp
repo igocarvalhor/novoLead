@@ -1,0 +1,32 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global"  >
+ <lightning:card title="Criar Lead">
+ <lightning:recordEditForm aura:id="recordEditForm"
+                           objectApiName="Lead"
+                          >
+     						
+
+        <lightning:messages />
+    
+      
+        <div class="slds-grid">
+        <div class="slds-col slds-p-horizontal_medium">
+         
+           
+        <lightning:inputField fieldName="Name" />
+        </div>
+         
+        <div class="slds-col slds-p-horizontal_medium">
+        <lightning:inputField fieldName="Email" />
+        <lightning:inputField fieldName="Phone" />
+        <lightning:inputField fieldName="Industry" />
+           
+		
+        </div>
+        </div>
+		
+        <center><lightning:button class="slds-m-top_small" type="submit" label="Novo Lead" onclick="{!c.showToast}"/></center>
+	
+    </lightning:recordEditForm>
+
+ </lightning:card>
+</aura:component>
